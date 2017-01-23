@@ -7,8 +7,9 @@ package exercices.heritage;
 
 import exercices.core.Application;
 import exercices.heritage.animaux.entities.Animal;
-import exercices.heritage.heritage.animaux.impl.Chat;
-import exercices.heritage.heritage.animaux.impl.Chien;
+import exercices.heritage.animaux.entities.Tripoteur;
+import exercices.heritage.animaux.entities.impl.Chat;
+import exercices.heritage.animaux.entities.impl.Chien;
 
 /**
  *
@@ -18,16 +19,19 @@ public class Heritage extends Application {
 
     @Override
     public void start() {
-        Animal dog = new Chien(); 
+        Animal dog = new Chien();
         Animal cat = new Chat();
-        
+        Tripoteur loic = new Tripoteur();
+
+        loic.tripote(dog);
         dog.emettreSon();
+        loic.tripote(cat);
         cat.emettreSon();
+        
     }
 
     @Override
     public void create() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
 }

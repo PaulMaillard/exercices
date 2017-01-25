@@ -5,20 +5,23 @@
  */
 package exercices.heritage.animaux.entities;
 
+import exercices.heritage.Tripotable;
+
 /**
  *
  * @author francois-flachet
  */
 public class Tripoteur {
 
-    public void tripote(Animal animal) {
+    public void tripote(Tripotable a) {
 
         System.out.println(this.getClass().getSimpleName() + " "
                 + this.getClass().getDeclaredMethods()[0].getName() + " "
-                + animal.getClass().getSimpleName());
-        animal.emettreSon();
-        System.out.println(this.getClass().getSimpleName() + " Force "
-                + animal.getClass().getSimpleName());
-        animal.son = "hurle";
+                + a.getClass().getSimpleName());
+        if (a instanceof Animal) {
+            ((Animal)a).emettreSon();
+  
+        }
+
     }
 }

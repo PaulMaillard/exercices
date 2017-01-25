@@ -5,11 +5,13 @@
  */
 package exercices.heritage.animaux.entities;
 
+import exercices.heritage.Tripotable;
+
 /**
  *
  * @author francois-flachet
  */
-public abstract class Animal {
+public abstract class Animal implements Tripotable {
     public String son = "";
     public void emettreSon(){
         System.out.println("Le " + this.getClass().getSimpleName()+" "+ son);

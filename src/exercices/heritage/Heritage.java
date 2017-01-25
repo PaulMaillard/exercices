@@ -10,6 +10,8 @@ import exercices.heritage.animaux.entities.Animal;
 import exercices.heritage.animaux.entities.Tripoteur;
 import exercices.heritage.animaux.entities.impl.Chat;
 import exercices.heritage.animaux.entities.impl.Chien;
+import exercices.heritage.meubles.entities.Meuble;
+import exercices.heritage.meubles.entities.impl.Table;
 
 /**
  *
@@ -21,13 +23,12 @@ public class Heritage extends Application {
     public void start() {
         Animal dog = new Chien();
         Animal cat = new Chat();
+        Meuble table1 = new Table();
         Tripoteur loic = new Tripoteur();
 
         loic.tripote(dog);
-        dog.emettreSon();
         loic.tripote(cat);
-        cat.emettreSon();
-        
+        loic.tripote(table1);
     }
 
     @Override

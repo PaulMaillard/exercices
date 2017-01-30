@@ -5,7 +5,8 @@
  */
 package exercices;
 
-import exercices.heritage.Heritage;
+import exercices.core.Application;
+import exercices.recursivité.suites.fibonacci.SuiteFibo;
 
 /**
  *
@@ -17,7 +18,7 @@ public class Exercices {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Heritage exo1 = new Heritage();
+        Application exo1 = new SuiteFibo();
         exo1.start();
     }
     
